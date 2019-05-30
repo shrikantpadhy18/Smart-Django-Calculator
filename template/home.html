@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+<head>
+<title>
+
+
+</title>
+
+</head>
+
+<body style="background-color:blue ">
+	<header style="width: 100%;height: 20px">
+		
+	</header>
+<center>
+	<div style="width: 560px;height: 380px">
+		<form method="POST" action="/add/" >
+		<div style="width: 560px;height: 100px;background-color: orange"><h1 style="position:relative;top:25px;font-weight: bold;font-style: italic;font-family: algerian">DJANGO CALCULATOR</h1></div>
+
+
+		<div style="position:relative;top:1px;width: 560px;height: 200px;background-color: aliceblue">
+				
+				
+				{% csrf_token %}
+			<div style="height: 90px"><h1 >FIRST NUMBER:</h1><input  type="text" placeholder="enter first number" name="val1"></div>
+			<hr>
+			<div style="height:80px"><h1 style="position: relative;bottom: 10px">SECOND NUMBER:</h1><input style="position: relative;bottom: 20px" type="text" name="val2" placeholder="enter second number"></div>
+			<hr>
+		</div>
+			<div style="position:relative;top:1px;width: 560px; height:50px;background-color: pink">
+				<input style="height: 35px;background-color: green" type="submit" name="ad" value="add">
+				<input style="height: 35px;background-color: blue"  type="submit" name="su" value="sub">
+				<input style="height: 35px;background-color: red"  type="submit" name="mu" value="multiply">
+				<input style="height: 35px;background-color: yellow"  type="submit" name="di" value="div">
+				<input style="height: 35px;background-color: orange " type="submit" name="mo" value="modulo">
+			</div>
+			
+		
+					{% if p %}
+					<marquee><p style="color: red;font-weight: bold;font-size: 30px;background-color: yellow">THE RESULT IS:{{p}}</p></marquee>
+					{% endif %}
+
+				</form>
+	</div>
+</center>
+
+
+
+	</body>
+	
+
+</html>
